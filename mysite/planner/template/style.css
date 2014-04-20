@@ -1,0 +1,58 @@
+body
+{
+	font-family: verdana;
+}
+
+.clear-float
+{
+	clear: both;
+}
+
+.left
+{
+	float: left;
+}
+
+.row {
+	height: 50px;
+	width: 100%;
+	clear: both;
+}
+
+
+.row {
+
+	border-color: #c0c0c0;
+	border-bottom: 1px;
+}
+
+.col
+{
+	width: 13%;
+	height: 50px;
+	float: left;
+	text-align: center;
+}
+
+.time, .col 
+{
+	border-bottom: solid 1px #c0c0c0;
+	border-right: solid 1px #c0c0c0;
+}
+
+.time, .time-blank
+{
+	float: left;
+	text-align: right;
+	width: 45px;
+	height: 50px;
+	padding: 0 12px 0 0;
+	border-left: solid 1px #c0c0c0;
+}
+
+.week div
+{
+	height: 24px;
+	border-top: solid 1px #c0c0c0;
+	background-color: #f0f0f0;
+}
