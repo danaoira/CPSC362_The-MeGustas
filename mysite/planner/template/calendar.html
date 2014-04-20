@@ -3,6 +3,7 @@
 	<head>
 		<title>TitanPlanner</title>		
 		<link rel="stylesheet" href="style.css" type="text/css"/>
+		<script src="jquery-1.11.0.min" />
 	</head>
 
 	<body>
@@ -10,167 +11,158 @@
 			<div class="left">
 				<h1>TitanPlanner<sup>beta</sup></h1>
 			</div>
+			<div class="clear-float"></div>
+			<div class="cal-header">
+				<div class="blank">&nbsp;</div>
+				<div class="week-day">Mon</div>
+				<div class="week-day">Tue</div>
+				<div class="week-day">Wed</div>
+				<div class="week-day">Thu</div>
+				<div class="week-day">Fri</div>
+				<div class="week-day">Sat</div>
+				<div class="week-day">Sun</div>
+			</div>
+			<div class="clear-float"></div>
 		</div>
-		<div id="table" class="clear-float">
-			<div class="week">
-				<div class="time-blank" width="45px"> </div>
-				<div class="col">Sun</div>
-				<div class="col">Mon</div>
-				<div class="col">Tue</div>
-				<div class="col">Wed</div>
-				<div class="col">Thu</div>
-				<div class="col">Fri</div>
-				<div class="col">Sat</div>
+
+		<div id="calendar">
+			<div class="time-col">
+				<div class="hour-slot">8am</div>
+				<div class="hour-slot">9am</div>
+				<div class="hour-slot">10am</div>
+				<div class="hour-slot">11am</div>
+				<div class="hour-slot">12pm</div>
+				<div class="hour-slot">1pm</div>
+				<div class="hour-slot">2pm</div>
+				<div class="hour-slot">3pm</div>
+				<div class="hour-slot">4pm</div>
+				<div class="hour-slot">5pm</div>
+				<div class="hour-slot">6pm</div>
+				<div class="hour-slot">7pm</div>
+				<div class="hour-slot">8pm</div>
+				<div class="hour-slot">9pm</div>
+				<div class="hour-slot">10pm</div>
 			</div>
-			<div class="row">
-				<div class="time">8am</div>
-				<div class="col sun"></div>
-				<div class="col mon"></div>
-				<div class="col tue"></div>
-				<div class="col wed"></div>
-				<div class="col thu"></div>
-				<div class="col fri"></div>
-				<div class="col sat"></div>
-			</div>
-			<div class="row">
-				<div class="time">9am</div>
-				<div class="col sun"></div>
-				<div class="col mon"></div>
-				<div class="col tue"></div>
-				<div class="col wed"></div>
-				<div class="col thu"></div>
-				<div class="col fri"></div>
-				<div class="col sat"></div>
-			</div>
-			<div class="row">
-				<div class="time">10am</div>
-				<div class="col sun"></div>
-				<div class="col mon"></div>
-				<div class="col tue"></div>
-				<div class="col wed"></div>
-				<div class="col thu"></div>
-				<div class="col fri"></div>
-				<div class="col sat"></div>
-			</div>
-			<div class="row">
-				<div class="time">11am</div>
-				<div class="col sun"></div>
-				<div class="col mon"></div>
-				<div class="col tue"></div>
-				<div class="col wed"></div>
-				<div class="col thu"></div>
-				<div class="col fri"></div>
-				<div class="col sat"></div>
-			</div>
-			<div class="row">
-				<div class="time">12pm</div>
-				<div class="col sun"></div>
-				<div class="col mon"></div>
-				<div class="col tue"></div>
-				<div class="col wed"></div>
-				<div class="col thu"></div>
-				<div class="col fri"></div>
-				<div class="col sat"></div>
-			</div>
-			<div class="row">
-				<div class="time">1pm</div>
-				<div class="col sun"></div>
-				<div class="col mon"></div>
-				<div class="col tue"></div>
-				<div class="col wed"></div>
-				<div class="col thu"></div>
-				<div class="col fri"></div>
-				<div class="col sat"></div>
-			</div>
-			<div class="row">
-				<div class="time">2pm</div>
-				<div class="col sun"></div>
-				<div class="col mon"></div>
-				<div class="col tue"></div>
-				<div class="col wed"></div>
-				<div class="col thu"></div>
-				<div class="col fri"></div>
-				<div class="col sat"></div>
-			</div>
-			<div class="row">
-				<div class="time">3pm</div>
-				<div class="col sun"></div>
-				<div class="col mon"></div>
-				<div class="col tue"></div>
-				<div class="col wed"></div>
-				<div class="col thu"></div>
-				<div class="col fri"></div>
-				<div class="col sat"></div>
-			</div>
-			<div class="row">
-				<div class="time">4pm</div>
-				<div class="col sun"></div>
-				<div class="col mon"></div>
-				<div class="col tue"></div>
-				<div class="col wed"></div>
-				<div class="col thu"></div>
-				<div class="col fri"></div>
-				<div class="col sat"></div>
-			</div>
-			<div class="row">
-				<div class="time">5pm</div>
-				<div class="col sun"></div>
-				<div class="col mon"></div>
-				<div class="col tue"></div>
-				<div class="col wed"></div>
-				<div class="col thu"></div>
-				<div class="col fri"></div>
-				<div class="col sat"></div>
-			</div>
-			<div class="row">
-				<div class="time">6pm</div>
-				<div class="col sun"></div>
-				<div class="col mon"></div>
-				<div class="col tue"></div>
-				<div class="col wed"></div>
-				<div class="col thu"></div>
-				<div class="col fri"></div>
-				<div class="col sat"></div>
-			</div>
-			<div class="row">
-				<div class="time">7pm</div>
-				<div class="col sun"></div>
-				<div class="col mon"></div>
-				<div class="col tue"></div>
-				<div class="col wed"></div>
-				<div class="col thu"></div>
-				<div class="col fri"></div>
-				<div class="col sat"></div>
-			</div>
-			<div class="row">
-				<div class="time">8pm</div>
-				<div class="col sun"></div>
-				<div class="col mon"></div>
-				<div class="col tue"></div>
-				<div class="col wed"></div>
-				<div class="col thu"></div>
-				<div class="col fri"></div>
-				<div class="col sat"></div>
-			</div>
-			<div class="row">
-				<div class="time">9pm</div>
-				<div class="col sun"></div>
-				<div class="col mon"></div>
-				<div class="col tue"></div>
-				<div class="col wed"></div>
-				<div class="col thu"></div>
-				<div class="col fri"></div>
-				<div class="col sat"></div>
-			</div>
-			<div class="row">
-				<div class="time">10pm</div>
-				<div class="col sun"></div>
-				<div class="col mon"></div>
-				<div class="col tue"></div>
-				<div class="col wed"></div>
-				<div class="col thu"></div>
-				<div class="col fri"></div>
-				<div class="col sat"></div>
+			<div class="calendar-container">
+				<div class="week-col">
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+				</div>
+				<div class="week-col">
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+				</div>
+				<div class="week-col">
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+				</div>
+				<div class="week-col">
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+				</div>
+				<div class="week-col">
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+				</div>
+				<div class="week-col">
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+				</div>
+				<div class="week-col">
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+					<div class="time-slot"></div>
+				</div>
 			</div>
 		</div>
 	</body>
