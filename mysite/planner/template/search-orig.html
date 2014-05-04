@@ -1,0 +1,126 @@
+<!-- 
+Name: Dana Toribio
+Date: 4/15/14
+Filename: search.html
+Description: This is the search page of TitanPlanner, which contains the search form using HTML, CSS and jQuery, which will be implemented in later versions.
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TitanPlanner</title>		
+		<link rel="stylesheet" href="style.css" type="text/css"/>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<h1>Search for Classes</h1>
+		<h2>Enter Search Criteria</h2>
+
+		<div class="content">
+			<p>Select at least 2 search criteria. Click Search to view your search results.</p>
+		</div>
+
+		<div class="class-search-container">
+			<form id="class-search" action="">
+				<div class="search-section">
+					<span class="search-header"><h3>Class Search</h3></span>
+					<div class="clear-float"></div>
+
+					<div class="search-item">Course Subject</div>
+					<div class="search-field">
+						<select name="course-subject">
+							<option value="cpsc" selected>Computer Science
+						</select>
+					</div>
+					<div class="clear-float"></div>
+
+					<div class="search-item">Course Number</div>
+					<div class="search-field">
+						<select name="course-number-comparison">
+							<option value="contains">contains</option>
+							<option value="greater-equal">greater than or equal to</option>
+							<option value="is-exactly" selected>is exactly</option>
+							<option value="less-equal">less than or equal to</option>
+						</select>
+					</div>
+					<div class="search-field-2">
+						<input type="text" name="course-number" />
+					</div>
+					<div class="clear-float"></div>
+				</div>
+
+				<div class="search-section">
+					<span class="search-header"><h3>Search by Course Keywords in Course Title, Long Description or Course Topic</h3></span>
+					<div class="clear-float"></div>
+
+					<div class="search-item">Course Keyword</div>
+					<div class="search-field">
+						<input type="text" name="course-keyword" />
+					</div>
+					<div class="clear-float"></div>
+				</div>
+
+				<div class="search-section">
+					<span class="search-header"><h3>Additional Search Criteria</h3></span>
+					<div class="clear-float"></div>
+
+					<div class="search-item">Meeting Start Time</div>
+					<div class="search-field">
+						<select name="meeting-start-comparison">
+							<option value="between">between</option>
+							<option value="greater-than">greater than</option>
+							<option value="greater-equal" selected>greater than or equal to</option>
+							<option value="exactly">is exactly</option>
+							<option value="less-than">less than</option>
+							<option value="less-equal">less than or equal to</option>
+						</select>
+					</div>
+					<div class="search-field-2">
+						<input type="text" name="meeting-start-value" />
+					</div>
+					<div class="clear-float"></div>
+
+					<div class="search-item">Meeting End Time</div>
+					<div class="search-field">
+						<select name="meeting-end-comparison">
+							<option value="between">between</option>
+							<option value="greater-than">greater than</option>
+							<option value="greater-equal" selected>greater than or equal to</option>
+							<option value="exactly">is exactly</option>
+							<option value="less-than">less than</option>
+							<option value="less-equal">less than or equal to</option>
+						</select>
+					</div>
+					<div class="search-field-2">
+						<input type="text" name="meeting-end-value" />
+					</div>
+					<div class="clear-float"></div>
+
+					<div class="search-item">Days of Week</div>
+					<div class="search-checkbox">
+						<input type="checkbox" name="day-of-week" value="Mo" />Mon
+						<input type="checkbox" name="day-of-week" value="Tu" />Tue
+						<input type="checkbox" name="day-of-week" value="We" />
+						Wed
+						<input type="checkbox" name="day-of-week" value="Th" />
+						Thu
+						<input type="checkbox" name="day-of-week" value="Fr" />
+						Fri
+						<input type="checkbox" name="day-of-week" value="Sa" />
+						Sat
+						<input type="checkbox" name="day-of-week" value="Su" />
+						Sun
+					</div>
+					<div class="clear-float"></div>
+
+					<div class="search-item">Instructor Last Name</div>
+					<div class="search-field">
+						<input type="text" name="instructor" />
+					</div>
+					<div class="clear-float"></div>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

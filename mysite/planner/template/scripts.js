@@ -11,8 +11,27 @@ $(document).ready(function() {
 	//$(".time-slot").width($(window).width(timeslot-width);
 });
 
-//var timeslot-width = ($(window).width() - 45px) / 7;
+// function iframeResize() {
+// 	description: resizes iframe heights to span the entire height of
+// 		the window
+// 	triggers: document.ready/onPageLoad, onWindowResize
+// }
 
-function iframeResize() {
-	var 
-}
+// function weekdayResize() {
+// 	description: resizes the width of the weekday slots
+// 	calculation: (window.width() - 45px) / 7
+// 	selectors affected: ".week-day"
+// }
+
+// function calendarSlotResize() {
+// 	description: resizes the width of the calendar slots
+// 	calculation: (window.width() - 45px) / 7
+// 	selectors affected: ".hour-slot"
+// }
+
+// function calendarResize() {
+// 	description: resizes the height of the calendar to span the
+// 		entire height of the window
+// 	calculation: (window).height() = 100%
+// 	triggers: document.ready/onPageLoad, onWindowResize
+// }
