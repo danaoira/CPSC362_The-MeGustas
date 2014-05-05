@@ -1,0 +1,181 @@
+ /*
+Name: Dana Toribio
+Date: 4/15/14
+Filename: style.css
+Description: This is the main stylesheet of TitanPlanner, which will
+	contain the base styles of the website. May include SaSS in
+	later versions to add programming logic to the stylesheets,
+	but for now, this will be the generic styles to run the site
+	at a minimum.
+*/
+
+/* ---- generic styles ---- */
+html, body
+{
+	color: #284277;
+	font-family: verdana, arial;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+}
+
+body
+{
+	overflow: ;
+}
+
+h1
+{
+	font-size: 1.5em;
+}
+
+h2
+{
+	font-size: 1.2em;
+}
+
+h3
+{
+	font-size: 1.1em;
+}
+
+div, input
+{
+	font-size: 12.5px;
+}
+
+select
+{
+	width: 195px;
+	height: 20px;
+}
+
+input[type=text]
+{
+	width: 195px;
+}
+
+/* ---- generic overrides ---- */
+
+.center
+{
+	text-align: center;
+}
+
+.clear-float
+{
+	clear: both;
+}
+
+.left, .blank, .week-day, .time.col, .week.col
+{
+	float: left;
+}
+
+/* ---- calendar header ---- */
+
+.cal-header
+{
+	background-color: #f0f0f0;
+	border-top: solid 1px #c0c0c0;
+	border-bottom: solid 1px #c0c0c0;
+	height: 20px;
+	width: 100%;
+}
+
+.cal-header div
+{
+	text-align: center;
+	width: 13%;
+}
+
+.cal-header .blank
+{
+	width: 60px;
+}
+
+.week-day
+{
+	font-size: 14px;
+}
+
+/* ---- calendar settings ---- */
+
+#calendar
+{
+	height: 500px;
+	overflow: auto;
+	width: 100%;
+}
+
+.time-col
+{
+	float: left;
+	width: 60px;
+	text-align: right;
+}
+
+.hour-slot
+{
+	height: 60px;
+	border-bottom: solid 1px #c0c0c0;
+	border-right: double 3px #c0c0c0;
+	padding-right: 5px;
+}
+
+.calendar-container
+{
+	width: 100%;
+}
+
+.week-col
+{
+	float: left;
+	text-align: center;
+	width: 13.1%;
+}
+
+.time-slot
+{
+	border-bottom: solid 1px #c0c0c0;
+	border-right: double 3px #c0c0c0;
+	height: 60px;
+}
+
+/* ---- search form ---- */
+
+.search-header
+{
+	font-weight: bold;
+}
+
+.search-section
+{
+	padding-bottom: 1em;
+}
+
+.search-item, .search-field, .search-field-2
+{
+	float: left;
+}
+
+.search-item
+{
+	padding: 0 0 1em 1em;
+	width: 175px;
+}
+
+.search-field
+{
+	width: 200px;
+}
+
+.search-field-2 input[type=text]
+{
+	width: 75px;
+}
+
+.search-checkbox
+{
+	padding: 0 0 0.5em 0em;
+}

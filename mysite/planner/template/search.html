@@ -6,121 +6,110 @@ Description: This is the search page of TitanPlanner, which contains the search 
 -->
 
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>TitanPlanner</title>		
-		<link rel="stylesheet" href="style.css" type="text/css"/>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	</head>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calendar</title>
+
+    <!-- Bootstrap -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="search.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
 
 	<body>
-		<h1>Search for Classes</h1>
-		<h2>Enter Search Criteria</h2>
-
-		<div class="content">
+		<div class="container-fluid">
+			<h2>Search for Classes</h2>
+			<h3>Enter Search Criteria</h3>
 			<p>Select at least 2 search criteria. Click Search to view your search results.</p>
-		</div>
 
-		<div class="class-search-container">
-			<form id="class-search" action="">
-				<div class="search-section">
-					<span class="search-header"><h3>Class Search</h3></span>
-					<div class="clear-float"></div>
-
-					<div class="search-item">Course Subject</div>
-					<div class="search-field">
-						<select name="course-subject">
-							<option value="cpsc" selected>Computer Science
+			<form class="form-horizontal" role="form">
+			<h4>Class Search</h4>
+				<div class="form-group">
+					<label for="course-semester" class="control-label col-xs-offset-1 col-xs-3">Semester</label>
+					<div class="col-xs-5">
+						<select type="semester" class="form-control input-sm">
+							<option value="sp14">Spring 2014</option>
+							<option value="su14" selected>Summer 2014</option>
+							<option value="f14">Fall 2014</option>
 						</select>
 					</div>
-					<div class="clear-float"></div>
-
-					<div class="search-item">Course Number</div>
-					<div class="search-field">
-						<select name="course-number-comparison">
-							<option value="contains">contains</option>
-							<option value="greater-equal">greater than or equal to</option>
-							<option value="is-exactly" selected>is exactly</option>
-							<option value="less-equal">less than or equal to</option>
-						</select>
-					</div>
-					<div class="search-field-2">
-						<input type="text" name="course-number" />
-					</div>
-					<div class="clear-float"></div>
 				</div>
-
-				<div class="search-section">
-					<span class="search-header"><h3>Search by Course Keywords in Course Title, Long Description or Course Topic</h3></span>
-					<div class="clear-float"></div>
-
-					<div class="search-item">Course Keyword</div>
-					<div class="search-field">
-						<input type="text" name="course-keyword" />
+				<div class="form-group">
+					<label for="subject-area" class="control-label col-xs-offset-1 col-xs-3">Subject Area</label>
+					<div class="col-xs-5">
+						<select type="subject-area" class="form-control input-sm">
+							<option value="cpsc">Computer Science</option>
+						</select>
 					</div>
-					<div class="clear-float"></div>
 				</div>
-
-				<div class="search-section">
-					<span class="search-header"><h3>Additional Search Criteria</h3></span>
-					<div class="clear-float"></div>
-
-					<div class="search-item">Meeting Start Time</div>
-					<div class="search-field">
-						<select name="meeting-start-comparison">
-							<option value="between">between</option>
-							<option value="greater-than">greater than</option>
-							<option value="greater-equal" selected>greater than or equal to</option>
-							<option value="exactly">is exactly</option>
-							<option value="less-than">less than</option>
-							<option value="less-equal">less than or equal to</option>
+				<div class="form-group">
+					<label for="course-number" class="control-label col-xs-offset-1 col-xs-3">Course Number</label>
+					<div class="col-xs-5">
+						<input type="course-number" class="form-control input-sm" id="semester" placeholder="Course Number">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="course-career" class="control-label col-xs-offset-1 col-xs-3">Course Career</label>
+					<div class="col-xs-5">
+						<select type="subject-area" class="form-control input-sm">
+							<option value="undergraduate">Undergraduate</option>
+							<option value="graduate">Graduate</option>
+							<option value="professional-teaching">Professional/Teaching</option>
 						</select>
 					</div>
-					<div class="search-field-2">
-						<input type="text" name="meeting-start-value" />
+				</div>
+				<div class="form-group">
+					<label for="keyword" class="control-label col-xs-offset-1 col-xs-3">Course Keyword</label>
+					<div class="col-xs-5">
+						<input type="keyword" class="form-control input-sm" id="keyword" placeholder="Keyword">
 					</div>
-					<div class="clear-float"></div>
-
-					<div class="search-item">Meeting End Time</div>
-					<div class="search-field">
-						<select name="meeting-end-comparison">
-							<option value="between">between</option>
-							<option value="greater-than">greater than</option>
-							<option value="greater-equal" selected>greater than or equal to</option>
-							<option value="exactly">is exactly</option>
-							<option value="less-than">less than</option>
-							<option value="less-equal">less than or equal to</option>
-						</select>
+				</div>
+				<div class="form-group">
+					<label for="days-of-week" class="control-label col-xs-offset-1 col-xs-3">Days of Week</label>
+					<div class="col-xs-8">
+						<label class="checkbox-inline">
+							<input type="checkbox" id="day1" value="M"> Mon
+						</label>
+						<label class="checkbox-inline">
+							<input type="checkbox" id="day2" value="T"> Tue
+						</label>
+						<label class="checkbox-inline">
+							<input type="checkbox" id="day3" value="W"> Wed
+						</label>
+						<label class="checkbox-inline">
+							<input type="checkbox" id="day4" value="R"> Thu
+						</label>
+						<label class="checkbox-inline">
+							<input type="checkbox" id="day5" value="F"> Fri
+						</label>
+						<label class="checkbox-inline">
+							<input type="checkbox" id="day6" value="S"> Sat
+						</label>
 					</div>
-					<div class="search-field-2">
-						<input type="text" name="meeting-end-value" />
+				</div>
+				<div class="form-group" style="padding-top: 1em;">
+					<div class="col-xs-offset-4 col-sm-8">
+						<button type="button" class="btn btn-default btn-sm">Display All</button>
+						<button type="submit" class="btn btn-primary btn-sm">Submit</button>
 					</div>
-					<div class="clear-float"></div>
-
-					<div class="search-item">Days of Week</div>
-					<div class="search-checkbox">
-						<input type="checkbox" name="day-of-week" value="Mo" />Mon
-						<input type="checkbox" name="day-of-week" value="Tu" />Tue
-						<input type="checkbox" name="day-of-week" value="We" />
-						Wed
-						<input type="checkbox" name="day-of-week" value="Th" />
-						Thu
-						<input type="checkbox" name="day-of-week" value="Fr" />
-						Fri
-						<input type="checkbox" name="day-of-week" value="Sa" />
-						Sat
-						<input type="checkbox" name="day-of-week" value="Su" />
-						Sun
-					</div>
-					<div class="clear-float"></div>
-
-					<div class="search-item">Instructor Last Name</div>
-					<div class="search-field">
-						<input type="text" name="instructor" />
-					</div>
-					<div class="clear-float"></div>
 				</div>
 			</form>
 		</div>
+
+	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	    <script src="js/bootstrap.min.js"></script>
+	    <script src="scripts.js"></
 	</body>
 </html>

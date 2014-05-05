@@ -1,3 +1,4 @@
+/* Generic Styles */
 .float-left
 {
 	float: left;
@@ -10,9 +11,23 @@
 
 h1
 {
-	font-size: 28px;
 	margin: 0;
-	padding: 0.5em 0.1em;
+	padding: 0.25em 0;
+}
+
+/* Calendar Header Styles */
+.header-text
+{
+	background-color: #032D57;
+}
+
+#header h1
+{
+	background-image: url(images/fullerton-logo.jpg);
+	color: #fff;
+	width: 62px;
+	height: 60px;
+	text-indent: 75px;
 }
 
 /* General Calendar Styles */
@@ -39,7 +54,7 @@ h1
 	border-bottom: 0;
 }
 
-/* Calendar Header */
+/* Calendar Weekdays Header */
 .cal-header
 {
 	width: 100%;
@@ -55,13 +70,13 @@ h1
 
 .cal-header .blank
 {
-	width: 7%;
+	width: 8.8%;
 }
 
 .week-day
 {
 	float: left;
-	width: 15.5%;
+	width: 15.2%;
 }
 
 /* Calendar Main */
@@ -75,7 +90,7 @@ h1
 .time-col
 {
 	float: left;
-	width: 7%;
+	width: 8.8%;
 }
 
 .hour-slot, .time-slot
@@ -86,5 +101,5 @@ h1
 .week-col
 {
 	float: left;
-	width: 15.5%;
+	width: 15.2%;
 }
