@@ -1,0 +1,12 @@
+Registered Courses: 
+
+{% if list %}
+    <ul>
+    {% for course in list %}
+        <p>{{ course.subject }} {{ course.number }} : {{ course.title }}</p> <p>({{ course.days }}, {{ course.start_time }}-{{ course.end_time }})</p><a href="{% url 'remove' course.id %}">remove</a>
+       
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Courses are registered.</p>
+{% endif %}

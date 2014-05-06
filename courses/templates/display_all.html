@@ -1,0 +1,12 @@
+All Courses:
+
+{% if course_list %}
+    <ul>
+    {% for course in course_list %}
+        <p>{{ course.subject }} {{ course.number }} : {{ course.title }} <a href="{% url 'add' course.id %}">add</a> </p>
+        <p>{{ course.days }}, {{ course.start_time }}-{{ course.end_time }}</p>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Courses are available.</p>
+{% endif %}

@@ -1,0 +1,12 @@
+Search Results:
+
+{% if list %}
+	<p>Found {{ list|length }} course{{ list|pluralize }}</p>
+    <ul>
+        {% for course in list %}
+        <li>{{ course.subject }} {{ course.number }} : {{ course.title }} <a href="{% url 'add' course.id %}">add</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No courses found.</p>
+{% endif %}
