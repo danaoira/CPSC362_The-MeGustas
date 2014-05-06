@@ -15,7 +15,7 @@ Description: This is the search page of TitanPlanner, which contains the search 
 
     <!-- Bootstrap -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="search.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -27,13 +27,35 @@ Description: This is the search page of TitanPlanner, which contains the search 
   </head>
 
 	<body>
+		<div id="logo">
+			<div class="container">
+				<div class="float-left">
+					<h1></h1>
+				</div>
+				<div class="btn-group dropdown" style="float: right; margin: 12px 0;">
+				  <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-th-list"></span></button>
+				  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				    <span class="caret"></span>
+				    <span class="sr-only">Toggle Dropdown</span>
+				  </button>
+				  <ul class="dropdown-menu pull-right">
+				    <!-- Dropdown menu links -->
+				    <li><a href="important-dates.html" target="right-page">Important Dates</a></li>
+				    <li><a href="">Export to PDF</a></li>
+				    <li><a href="">Export to URL</a></li>
+				    <li class="divider"></li>
+				    <li><a href="">Send Feedback</a></li>
+				  </ul>
+				</div>
+			</div>
+		</div>
+		<div class="clear-float"></div>
 		<div class="container-fluid">
-			<h2>Search for Classes</h2>
-			<h3>Enter Search Criteria</h3>
+			<div class="page-header">
+			<h2>Search for Classes</h2></div>
 			<p>Select at least 2 search criteria. Click Search to view your search results.</p>
 
 			<form class="form-horizontal" role="form">
-			<h4>Class Search</h4>
 				<div class="form-group">
 					<label for="course-semester" class="control-label col-xs-offset-1 col-xs-3">Semester</label>
 					<div class="col-xs-5">
@@ -109,7 +131,7 @@ Description: This is the search page of TitanPlanner, which contains the search 
 	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	    <!-- Include all compiled plugins (below), or include individual files as needed -->
-	    <script src="js/bootstrap.min.js"></script>
+	    <script src="dist/js/bootstrap.min.js"></script>
 	    <script src="scripts.js"></
 	</body>
 </html>

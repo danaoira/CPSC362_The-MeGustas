@@ -7,8 +7,14 @@
 
 $(document).ready(function() {
 	// formats the height of index.html's iframes to fill the window
-	$("iframe").height($(window).height());
-	//$(".time-slot").width($(window).width(timeslot-width);
+    var calendarHeight = $(window).height() - $('#header').height();
+    var timeslotWidth = ($('.time-slot').outerWidth() - 2);
+    var hourslotWidth = ($('.hour-slot').outerWidth() - 2);
+    $('#calendar').css('height', calendarHeight);
+    $('#left-page').css('height', $(window).height());
+    $('#right-page').css('height', $(window).height());
+    $('.blank').css('width', hourslotWidth);
+    $('.week-day').css('width', timeslotWidth);
 });
 
 // function iframeResize() {

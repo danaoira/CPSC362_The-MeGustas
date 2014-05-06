@@ -23,7 +23,7 @@ Description: This is the index page of TitanPlanner, which renders the calendar 
     <!-- Custom styles for this template -->
     <link href="sticky-footer-navbar.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
-
+    
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -35,39 +35,14 @@ Description: This is the index page of TitanPlanner, which renders the calendar 
   </head>
 
 	<body style="overflow: auto;">
-		<iframe src="cal.html" height="580px" width="50%" frameborder="0" class="float-left"></iframe>
-		<iframe src="search.html" height="580px" width="49%" frameborder="0" class="float-left"></iframe>
-
-		    <div id="footer">
-      <div class="container">
-        <p class="text-muted" style="float: left;">&copy; 2014 The MeGustas. All Rights Reserved.</p>
-		<div class="btn-group dropup" style="float: right; margin: 12px 0;">
-		  <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-th-list"></span></button>
-		  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-		    <span class="caret"></span>
-		    <span class="sr-only">Toggle Dropdown</span>
-		  </button>
-		  <ul class="dropdown-menu pull-right">
-		    <!-- Dropdown menu links -->
-		    <li><a href="">Important Dates</a></li>
-		    <li><a href="">Export to PDF</a></li>
-		    <li><a href="">Export to URL</a></li>
-		    <li class="divider"></li>
-		    <li><a href="">Send Feedback</a></li>
-		  </ul>
-		</div>
-      </div>
-    </div>
+		<iframe src="cal.html" id="left-page" width="50%" frameborder="0" class="float-left"></iframe>
+		<iframe src="search.html" id="right-page" width="50%" frameborder="0" class="float-left"></iframe>
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
   </body>
-</html>
-
-	</body>
-
 </html>

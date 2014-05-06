@@ -23,11 +23,10 @@ h1
 
 #header h1
 {
-	background-image: url(images/fullerton-logo.jpg);
+	background-image: url(images/logo.png);
+	background-repeat: no-repeat;
 	color: #fff;
-	width: 62px;
-	height: 60px;
-	text-indent: 75px;
+	height: 50px;
 }
 
 /* General Calendar Styles */
@@ -65,7 +64,7 @@ h1
 	float: left;
 	background-color: #f0f0f0;
 	border-bottom: solid 1px #c0c0c0;
-	border-top: solid 1px #c0c0c0;
+	padding: 5px 0;
 }
 
 .cal-header .blank
