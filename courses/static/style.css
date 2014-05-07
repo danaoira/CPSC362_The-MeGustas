@@ -98,8 +98,13 @@ form
 
 .hour-slot, .time-slot
 {
-	border-bottom: solid 1px #c0c0c0;
-	border-right: double 3px #c0c0c0;
+	border-bottom: dotted 1px #c0c0c0;
+	border-right: dotted 1px #c0c0c0;
+}
+
+.week-col:last-child .time-slot
+{
+	border-right: 0;
 }
 
 .hour-slot > h4
@@ -176,6 +181,7 @@ form
 	font-size: 10px;
 	padding: 3px;
 	text-align: center;
+	overflow: hidden;
 }
 
 .course-listing hr
