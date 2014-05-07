@@ -1,3 +1,10 @@
+<!-- 
+Name: Dana Toribio
+Date: 4/15/14
+Filename: search.html
+Description: This is the search page of TitanPlanner, which contains the search form using HTML, CSS and jQuery, which will be implemented in later versions.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,163 +15,191 @@
 
   <!-- Bootstrap -->
   <link href="../static/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/style.css" rel="stylesheet">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-      <![endif]-->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
 
-      <link href="../static/style.css" rel="stylesheet">
-    </head>
-    <body>
-      <div class="container">
-        <h1>Important Dates</h1>
-        <div class="panel-group" id="accordian">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordian" href="#collapseOne">
-                  Fall 2014
-                </a>
-              </h4>
-            </div>
-            <div id="collapseOne" class="panel-collapse collapse">
-              <div class="panel-body">
-                <table class="table table-striped">
-                  <tr>
-                    <th>Date</th>
-                    <th>Event</th>
-                  </tr>
-                  <tr>
-                    <td>7/25/13</td>
-                    <td>Fall 2014 Titan registration begins.</td>
-                  </tr>
-                  <tr>
-                    <td>8/18/14</td>
-                    <td>Fall 2014 classes begin.</td>
-                  </tr>
-                  <tr>
-                    <td>9/20/14</td>
-                    <td>Campus closed for Martin Luther King Jr. Day</td>
-                  </tr>
-                  <tr>
-                    <td>10/17/14</td>
-                    <td>Campus closed for Labor Day.</td>
-                  </tr>
-                  <tr>
-                    <td>11/31/14</td>
-                    <td>Campus closed for Thanksgiving.</td>
-                  </tr>
-                  <tr>
-                    <td>12/16/14</td>
-                    <td>Last day of final exams for Fall 2014.</td>
-                  </tr>  
-                </table>
-              </div>
-            </div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../static/dist/js/bootstrap.min.js"></script>
+<script src="../static/scripts.js"></script>
+
+</head>
+
+<body>
+  <div id="logo">
+    <div class="container">
+      <div class="float-left">
+        <h1></h1>
+      </div>
+      <div class="btn-group dropdown" style="float: right; margin: 12px 0; z-index: 1;">
+        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-th-list"></span></button>
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <span class="caret"></span>
+          <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu pull-right">
+          <!-- Dropdown menu links -->
+          <li><a href="important-dates.html" target="right-page">Important Dates</a></li>
+          <li><a href="">Export to PDF</a></li>
+          <li><a href="">Export to URL</a></li>
+          <li class="divider"></li>
+          <li><a href="">Send Feedback</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="clear-float"></div>
+
+  <div class="container">
+    <h1>Important Dates</h1>
+    <div class="panel-group" id="accordian">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordian" href="#collapseOne">
+              Fall 2014
+            </a>
+          </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse">
+          <div class="panel-body">
+            <table class="table table-striped">
+              <tr>
+                <th>Date</th>
+                <th>Event</th>
+              </tr>
+              <tr>
+                <td>7/25/13</td>
+                <td>Fall 2014 Titan registration begins.</td>
+              </tr>
+              <tr>
+                <td>8/18/14</td>
+                <td>Fall 2014 classes begin.</td>
+              </tr>
+              <tr>
+                <td>9/20/14</td>
+                <td>Campus closed for Martin Luther King Jr. Day</td>
+              </tr>
+              <tr>
+                <td>10/17/14</td>
+                <td>Campus closed for Labor Day.</td>
+              </tr>
+              <tr>
+                <td>11/31/14</td>
+                <td>Campus closed for Thanksgiving.</td>
+              </tr>
+              <tr>
+                <td>12/16/14</td>
+                <td>Last day of final exams for Fall 2014.</td>
+              </tr>  
+            </table>
           </div>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordian" href="#collapseTwo">
-                Summer 2014
-                </a>
-              </h4>
-            </div>
-            <div id="collapseTwo" class="panel-collapse collapse">
-              <div class="panel-body">
-                <table class="table table-striped">
-                  <tr>
-                    <th>Date</th>
-                    <th>Event</th>
-                  </tr>
-                  <tr>
-                    <td>06/05/13</td>
-                    <td>Summer 2014 Titan registration begins.</td>
-                  </tr>
-                  <tr>
-                    <td>06/18/14</td>
-                    <td>Summer 2014 classes begin.</td>
-                  </tr>
-                  <tr>
-                    <td>06/20/14</td>
-                    <td>Campus closed for Martin Luther King Jr. Day</td>
-                  </tr>
-                  <tr>
-                    <td>07/17/14</td>
-                    <td>Campus closed for President’s Day.</td>
-                  </tr>
-                  <tr>
-                    <td>07/31/14</td>
-                    <td>Campus closed for Cesar Chavez Day.</td>
-                  </tr>
-                  <tr>
-                    <td>07/31/14 - 04/06/14</td>
-                    <td>Spring 2014 Recess - No Classes.</td>
-                  </tr>
-                  <tr>
-                    <td>08/16/14</td>
-                    <td>Last day of final exams for Summer 2014.</td>
-                  </tr>  
-                </table>
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordian" href="#collapseThree">
-                Spring 2014
-                </a>
-              </h4>
-            </div>
-            <div id="collapseThree" class="panel-collapse collapse">
-              <div class="panel-body">
-                <table class="table table-striped">
-                  <tr>
-                    <th>Date</th>
-                    <th>Event</th>
-                  </tr>
-                  <tr>
-                    <td>10/25/13</td>
-                    <td>Spring 2014 Titan registration begins.</td>
-                  </tr>
-                  <tr>
-                    <td>01/18/14</td>
-                    <td>2014 classes begin.</td>
-                  </tr>
-                  <tr>
-                    <td>01/20/14</td>
-                    <td>Campus closed for Martin Luther King Jr. Day</td>
-                  </tr>
-                  <tr>
-                    <td>02/17/14</td>
-                    <td>Campus closed for President’s Day.</td>
-                  </tr>
-                  <tr>
-                    <td>03/31/14</td>
-                    <td>Campus closed for Cesar Chavez Day.</td>
-                  </tr>
-                  <tr>
-                    <td>03/31/14 - 04/06/14</td>
-                    <td>Spring 2014 Recess - No Classes.</td>
-                  </tr>
-                  <tr>
-                    <td>05/16/14</td>
-                    <td>Last day of final exams for Spring 2014.</td>
-                  </tr>  
-                </table>
-              </div>
-            </div>
-          </div>       
         </div>
       </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordian" href="#collapseTwo">
+              Summer 2014
+            </a>
+          </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse">
+          <div class="panel-body">
+            <table class="table table-striped">
+              <tr>
+                <th>Date</th>
+                <th>Event</th>
+              </tr>
+              <tr>
+                <td>06/05/13</td>
+                <td>Summer 2014 Titan registration begins.</td>
+              </tr>
+              <tr>
+                <td>06/18/14</td>
+                <td>Summer 2014 classes begin.</td>
+              </tr>
+              <tr>
+                <td>06/20/14</td>
+                <td>Campus closed for Martin Luther King Jr. Day</td>
+              </tr>
+              <tr>
+                <td>07/17/14</td>
+                <td>Campus closed for President’s Day.</td>
+              </tr>
+              <tr>
+                <td>07/31/14</td>
+                <td>Campus closed for Cesar Chavez Day.</td>
+              </tr>
+              <tr>
+                <td>07/31/14 - 04/06/14</td>
+                <td>Spring 2014 Recess - No Classes.</td>
+              </tr>
+              <tr>
+                <td>08/16/14</td>
+                <td>Last day of final exams for Summer 2014.</td>
+              </tr>  
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordian" href="#collapseThree">
+              Spring 2014
+            </a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse">
+          <div class="panel-body">
+            <table class="table table-striped">
+              <tr>
+                <th>Date</th>
+                <th>Event</th>
+              </tr>
+              <tr>
+                <td>10/25/13</td>
+                <td>Spring 2014 Titan registration begins.</td>
+              </tr>
+              <tr>
+                <td>01/18/14</td>
+                <td>2014 classes begin.</td>
+              </tr>
+              <tr>
+                <td>01/20/14</td>
+                <td>Campus closed for Martin Luther King Jr. Day</td>
+              </tr>
+              <tr>
+                <td>02/17/14</td>
+                <td>Campus closed for President’s Day.</td>
+              </tr>
+              <tr>
+                <td>03/31/14</td>
+                <td>Campus closed for Cesar Chavez Day.</td>
+              </tr>
+              <tr>
+                <td>03/31/14 - 04/06/14</td>
+                <td>Spring 2014 Recess - No Classes.</td>
+              </tr>
+              <tr>
+                <td>05/16/14</td>
+                <td>Last day of final exams for Spring 2014.</td>
+              </tr>  
+            </table>
+          </div>
+        </div>
+      </div>       
+    </div>
+  </div>
 
-      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-      <!-- Include all compiled plugins (below), or include individual files as needed -->
-      <script src="../static/dist/js/bootstrap.min.js"></script>
-    </body>
-    </html>
+</body>
+</html>

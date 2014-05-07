@@ -7,7 +7,7 @@ Description: This is the search page of TitanPlanner, which contains the search 
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,57 +19,58 @@ Description: This is the search page of TitanPlanner, which contains the search 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../static/dist/js/bootstrap.min.js"></script>
-    <script src="../static/scripts.js"></script>
-  </head>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../static/dist/js/bootstrap.min.js"></script>
+<script src="../static/scripts.js"></script>
 
-	<body>
-		<div id="logo">
-			<div class="container">
-				<div class="float-left">
-					<h1></h1>
-				</div>
-				<div class="btn-group dropdown" style="float: right; margin: 12px 0;">
-				  <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-th-list"></span></button>
-				  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-				    <span class="caret"></span>
-				    <span class="sr-only">Toggle Dropdown</span>
-				  </button>
-				  <ul class="dropdown-menu pull-right">
-				    <!-- Dropdown menu links -->
-				    <li><a href="important-dates.html" target="right-page">Important Dates</a></li>
-				    <li><a href="">Export to PDF</a></li>
-				    <li><a href="">Export to URL</a></li>
-				    <li class="divider"></li>
-				    <li><a href="">Send Feedback</a></li>
-				  </ul>
-				</div>
-			</div>
-		</div>
-		<div class="clear-float"></div>
-		<div class="container">
+</head>
 
-			<div class="page-header">Search Results:</div>
+<body>
+    <div id="logo">
+        <div class="container">
+            <div class="float-left">
+                <h1></h1>
+            </div>
+            <div class="btn-group dropdown" style="float: right; margin: 12px 0; z-index: 1;">
+                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-th-list"></span></button>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu pull-right">
+                    <!-- Dropdown menu links -->
+                    <li><a href="important-dates.html" target="right-page">Important Dates</a></li>
+                    <li><a href="">Export to PDF</a></li>
+                    <li><a href="">Export to URL</a></li>
+                    <li class="divider"></li>
+                    <li><a href="">Send Feedback</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="clear-float"></div>
+    <div class="container">
 
-			{% if list %}
-				<p>Found {{ list|length }} course{{ list|pluralize }}</p>
-			    <ul>
-			        {% for course in list %}
-			        <li>{{ course.subject }} {{ course.number }} : {{ course.title }} <a href="{% url 'add' course.id %}">add</a></li>
-			        {% endfor %}
-			    </ul>
-			{% else %}
-			    <p>No courses found.</p>
-			{% endif %}
-		</div>
-	</body>
+        <div class="page-header">Search Results:</div>
+
+        {% if list %}
+        <p>Found {{ list|length }} course{{ list|pluralize }}</p>
+        <ul>
+            {% for course in list %}
+            <li>{{ course.subject }} {{ course.number }} : {{ course.title }} <a href="{% url 'add' course.id %}">add</a></li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No courses found.</p>
+        {% endif %}
+    </div>
+</body>
 </html>
