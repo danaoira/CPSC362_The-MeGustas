@@ -58,7 +58,7 @@ h1
 .hour-slot
 {
 	text-align: right;
-	padding-right: 8px;
+	padding-right: 5px;
 }
 
 .week-day
@@ -70,6 +70,12 @@ h1
 {
 	border-bottom: solid 1px #c0c0c0;
 	border-right: double 3px #c0c0c0;
+}
+
+.hour-slot > h4
+{
+	margin: 0;
+	padding: 5px 0 0 0;
 }
 
 .hour-slot:last-child, .time-slot:last-child
@@ -126,3 +132,22 @@ h1
 	width: 15.2%;
 }
 /* END CALENDAR STYLES --------------------------------*/
+
+/* ADD COURSE DIV STYLE -------------------------------*/
+.course-listing
+{
+	position: relative;
+	z-index: 1;
+	height: 90px;
+	background-color: #032D57;
+	color: #fff;
+	border-radius: 5px;
+	font-size: 10px;
+	padding: 3px;
+	text-align: center;
+}
+
+.course-listing hr
+{
+	margin: 4px;
+}
