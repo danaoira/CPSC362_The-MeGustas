@@ -188,6 +188,29 @@ form
 {
 	margin: 4px;
 }
+
+.course-listing a
+{
+	color: #fff;
+}
+
+.course-listing a:hover
+{
+	text-decoration: none;
+}
+
+.course-listing
+{
+	opacity: 1;
+	transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
+}
+
+.course-listing:hover
+{
+	opacity: 0.5;
+}
 /* END ADD COURSE STYLE -------------------------------*/
 
 

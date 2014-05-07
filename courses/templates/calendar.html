@@ -169,16 +169,16 @@
 
       <script>
         $(document).ready(function() {
-          createCourseDiv( "{{ course.days }}", "{{ course.start_time}}", "{{ course.end_time }}", "{{ course.subject }}", "{{ course.number }}", "{{ course.title }}" );
+          createCourseDiv( "{{ course.days }}", "{{ course.start_time}}", "{{ course.end_time }}", "{{ course.subject }}", "{{ course.number }}", "{{ course.title }}", "{{ course.id }}" );
         });
       </script>
 
-      <div class="{{ course.days }} {{ course.start_time }} {{ course.end_time }}">
+<!--       <div class="{{ course.days }} {{ course.start_time }} {{ course.end_time }}">
         <p>{{ course.subject }} {{ course.number }} : {{ course.title }}</p>
         <p>({{ course.days }}, {{ course.start_time }}-{{ course.end_time }})</p>
         <p><a href="{% url 'remove' course.id %}">remove</a></p>
       </div>
-      {% endfor %}
+ -->      {% endfor %}
     </ul>
     {% else %}
     <p>No Courses are registered.</p>
