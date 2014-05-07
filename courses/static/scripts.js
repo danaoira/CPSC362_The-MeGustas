@@ -89,5 +89,3 @@ function createCourseOverlay(course_days, start_time, end_time, course_subject, 
 	}
 };
 // end createCourseOverlay -------------------------------------------------------------------------------
-
-

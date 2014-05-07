@@ -9,8 +9,13 @@ Description: This is the search page of TitanPlanner, which contains the search 
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><head>
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
     <title>Calendar</title>
 
     <!-- Bootstrap -->
@@ -57,21 +62,22 @@ Description: This is the search page of TitanPlanner, which contains the search 
         </div>
     </div>
     <div class="clear-float"></div>
+
     <div class="container">
         {% if list %}
         <div class="page-header">
             <h2>Search Results <small>Found {{ list|length }} course{{ list|pluralize }}.</small></h2>
         </div>
-        
+
         {% for course in list %}
-            <div class="search panel-group">
+            <div class="add-course-link search panel-group">
                 <div class="panel panel-default">
                     <div class="search panel-heading">
                         <a href="{% url 'add' course.id %}">
                             <table class="table table-hover">
                                 <tr>
                                     <td><strong>{{ course.subject }} {{ course.number }} - {{ course.title }}</strong></td>
-                                    <td><a href="{% url 'add' course.id %}"><span class="glyphicon glyphicon-ok"></span></a></td>
+                                    <td><a href="{% url 'add' course.id %}" onclick="test()"><span class="glyphicon glyphicon-ok"></span></a></td>
                                 </tr>
                             </table>
                         </a>
@@ -107,8 +113,8 @@ Description: This is the search page of TitanPlanner, which contains the search 
     is_registered = models.BooleanField(default=False)
  -->        {% endfor %}
         {% else %}
-        <p>No courses found.</p>
-        {% endif %}
+<!--         <p>No courses found.</p>
+ -->        {% endif %}
     </div>
 </body>
 </html>
