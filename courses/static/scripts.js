@@ -36,27 +36,27 @@ function createCourseDiv(course_days, start_time, end_time, course_subject, cour
 
 // M, T, W, R, F, S, MW, TT, MWF, MTWTF
 if (course_days == "Tu") {
-	$('.T .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + " " + course_title + "</div>");
+	$('.T .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + "<br/>" + course_title + "</div>");
 } else if (course_days == "Th") {
-	$('.R .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + " " + course_title + "</div>");
+	$('.R .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + "<br/>" + course_title + "</div>");
 } else if (course_days == "MW") {
-	$('.M .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + " " + course_title + "</div>");
-	$('.W .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + " " + course_title + "</div>");
+	$('.M .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + "<br/>" + course_title + "</div>");
+	$('.W .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + "<br/>" + course_title + "</div>");
 } else if (course_days == "TT") {
-	$('.T .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + " " + course_title + "</div>");
-	$('.R .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + " " + course_title + "</div>");	    
+	$('.T .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + "<br/>" + course_title + "</div>");
+	$('.R .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + "<br/>" + course_title + "</div>");	    
 } else if (course_days == "MWF") {
-	$('.M .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + " " + course_title + "</div>");
-	$('.W .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + " " + course_title + "</div>");
-	$('.F .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + " " + course_title + "</div>");
+	$('.M .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + "<br/>" + course_title + "</div>");
+	$('.W .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + "<br/>" + course_title + "</div>");
+	$('.F .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + "<br/>" + course_title + "</div>");
 } else if (course_days == "MTWTF") {
-	$('.M .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + " " + course_title + "</div>");
-	$('.T .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + " " + course_title + "</div>");
-	$('.W .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + " " + course_title + "</div>");
-	$('.R .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + " " + course_title + "</div>");
-	$('.F .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + " " + course_title + "</div>");
+	$('.M .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + "<br/>" + course_title + "</div>");
+	$('.T .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + "<br/>" + course_title + "</div>");
+	$('.W .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + "<br/>" + course_title + "</div>");
+	$('.R .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + "<br/>" + course_title + "</div>");
+	$('.F .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + "<br/>" + course_title + "</div>");
 } else {
-	$('.' + course_days + ' .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + " " + course_title + "</div>");
+	$('.' + course_days + ' .' + start_hour + '.' + start_AMPM).append("<div class=\"course-listing\">" + start_time + "-" + end_time + "<hr />CPSC " + course_number + "<br/>" + course_title + "</div>");
 }
 };
 

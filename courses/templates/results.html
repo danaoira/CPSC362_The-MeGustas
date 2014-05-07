@@ -37,7 +37,7 @@ Description: This is the search page of TitanPlanner, which contains the search 
     <div id="logo">
         <div class="container">
             <div class="float-left">
-                <h1></h1>
+                <a href="/" target="_top"><h1></h1></a>
             </div>
             <div class="btn-group dropdown" style="float: right; margin: 12px 0; z-index: 1;">
                 <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-th-list"></span></button>
@@ -58,16 +58,54 @@ Description: This is the search page of TitanPlanner, which contains the search 
     </div>
     <div class="clear-float"></div>
     <div class="container">
-
-        <div class="page-header">Search Results:</div>
-
         {% if list %}
-        <p>Found {{ list|length }} course{{ list|pluralize }}</p>
-        <ul>
-            {% for course in list %}
-            <li>{{ course.subject }} {{ course.number }} : {{ course.title }} <a href="{% url 'add' course.id %}">add</a></li>
-            {% endfor %}
-        </ul>
+        <div class="page-header">
+            <h2>Search Results <small>Found {{ list|length }} course{{ list|pluralize }}.</small></h2>
+        </div>
+        
+        {% for course in list %}
+            <div class="search panel-group">
+                <div class="panel panel-default">
+                    <div class="search panel-heading">
+                        <a href="{% url 'add' course.id %}">
+                            <table class="table table-hover">
+                                <tr>
+                                    <td><strong>{{ course.subject }} {{ course.number }} - {{ course.title }}</strong></td>
+                                    <td><a href="{% url 'add' course.id %}"><span class="glyphicon glyphicon-ok"></span></a></td>
+                                </tr>
+                            </table>
+                        </a>
+                    </div>
+                    <div class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <table class="table table-condensed table-bordered">
+                                <tr>
+                                   <th>Time</th>
+                                   <th>Room</th>
+                                   <th>Instructor</th>
+                                </tr>
+                                <tr>
+                                    <td>{{ course.days }} {{ course.start_time }}-{{ course.end_time }}</td>
+                                    <td>{{ course.room }}</td>
+                                    <td>{{ course.prof }}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+<!--     title = models.CharField(max_length=200)
+    number = models.CharField(max_length=200)
+    subject = models.CharField(max_length=200)
+    prof = models.CharField(max_length=200)
+    room = models.CharField(max_length=200)
+    start_time = models.CharField(max_length=200)
+    end_time = models.CharField(max_length=200)
+    days = models.CharField(max_length=5) # MWF, MW, TT, S
+    is_registered = models.BooleanField(default=False)
+ -->        {% endfor %}
         {% else %}
         <p>No courses found.</p>
         {% endif %}

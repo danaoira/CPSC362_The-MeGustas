@@ -1,12 +1,16 @@
+/*
+#032D57	Original Dark Blue
+#2A6498	Current Blue
+*/
+
+
 body
 {
 	margin-bottom: 0;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-
-/* CALENDAR STYLES ------------------------*/
-/* Generic Styles */
+/* GENERIC STYLES ------------------------------ */
 .float-left
 {
 	float: left;
@@ -23,9 +27,19 @@ h1
 	padding: 0.25em 0;
 }
 
+form
+{
+	padding: 1em 0;
+}
+
+.page-header
+{
+	margin: 20px 0;
+}
+
 #logo
 {
-	background-color: #032D57;
+	background-color: #2A6498;
 	width: 100%;
 	height: 60px;
 }
@@ -45,7 +59,11 @@ h1
 	overflow: auto;
 	position: relative;
 }
+/* END GENERIC STYLES ---------------------------------- */
 
+
+
+/* CALENDAR STYLES ------------------------------------- */
 /* Calendar Header Styles */
 .header-text
 {
@@ -144,13 +162,15 @@ h1
 }
 /* END CALENDAR STYLES --------------------------------*/
 
-/* ADD COURSE DIV STYLE -------------------------------*/
+
+
+/* ADD COURSE STYLE -------------------------------*/
 .course-listing
 {
 	position: relative;
 	z-index: 1;
 	height: 90px;
-	background-color: #032D57;
+	background-color: #2A6498;
 	color: #fff;
 	border-radius: 5px;
 	font-size: 10px;
@@ -162,3 +182,14 @@ h1
 {
 	margin: 4px;
 }
+/* END ADD COURSE STYLE -------------------------------*/
+
+
+
+/* SEARCH RESULTS STYLES ------------------------------*/
+.search.panel-heading, .search .table
+{
+	margin: 0;
+	padding: 0;
+}
+/* END SEARCH RESULTS STYLES --------------------------*/

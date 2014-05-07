@@ -60,77 +60,27 @@ Description: This is the search page of TitanPlanner, which contains the search 
 
 	<div id="content" class="container-fluid">
 		<div class="page-header">
-			<h2>Search for Classes</h2>
+			<h2>Send Feedback</h2>
 		</div>
-		<p>Select at least 2 search criteria. Click Search to view your search results.</p>
+		<p>We'd love to hear your feedback!</p>
+		<p>Please send us any feedback for features you would like to add or see to help improve TitanPlanner!</p>
 
-		<form action="/search/" method="get" class="form-horizontal" role="form">
+		<form>
+		</form><form action="/success.html" method="get" class="form-horizontal" role="form">
 			<div class="form-group">
-				<label for="course-semester" class="control-label col-xs-offset-1 col-xs-3">Semester</label>
+				<label for="course-number" class="control-label col-xs-offset-1 col-xs-3">Name</label>
 				<div class="col-xs-5">
-					<select type="semester" class="form-control input-sm">
-						<option value="sp14">Spring 2014</option>
-						<option value="su14" selected>Summer 2014</option>
-						<option value="f14">Fall 2014</option>
-					</select>
+					<input type="Name" class="form-control input-sm" id="Feedback-Name" placeholder="Name">
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="subject-area" class="control-label col-xs-offset-1 col-xs-3">Subject Area</label>
+				<label for="course-number" class="control-label col-xs-offset-1 col-xs-3">Name</label>
 				<div class="col-xs-5">
-					<select type="subject-area" class="form-control input-sm">
-						<option value="cpsc">Computer Science</option>
-					</select>
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="course-number" class="control-label col-xs-offset-1 col-xs-3">Course Number</label>
-				<div class="col-xs-5">
-					<input type="course-number" class="form-control input-sm" id="semester" placeholder="Course Number">
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="course-career" class="control-label col-xs-offset-1 col-xs-3">Course Career</label>
-				<div class="col-xs-5">
-					<select type="subject-area" class="form-control input-sm">
-						<option value="undergraduate">Undergraduate</option>
-						<option value="graduate">Graduate</option>
-						<option value="professional-teaching">Professional/Teaching</option>
-					</select>
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="keyword" class="control-label col-xs-offset-1 col-xs-3">Course Keyword</label>
-				<div class="col-xs-5">
-					<input type="text" name="key" class="form-control input-sm" id="keyword" placeholder="Keyword">
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="days-of-week" class="control-label col-xs-offset-1 col-xs-3">Days of Week</label>
-				<div class="col-xs-8">
-					<label class="checkbox-inline">
-						<input type="checkbox" id="day1" value="M"> Mon
-					</label>
-					<label class="checkbox-inline">
-						<input type="checkbox" id="day2" value="T"> Tue
-					</label>
-					<label class="checkbox-inline">
-						<input type="checkbox" id="day3" value="W"> Wed
-					</label>
-					<label class="checkbox-inline">
-						<input type="checkbox" id="day4" value="R"> Thu
-					</label>
-					<label class="checkbox-inline">
-						<input type="checkbox" id="day5" value="F"> Fri
-					</label>
-					<label class="checkbox-inline">
-						<input type="checkbox" id="day6" value="S"> Sat
-					</label>
+					<input type="Name" class="form-control input-sm" id="Feedback-Name" placeholder="Name">
 				</div>
 			</div>
 			<div class="form-group" style="padding-top: 1em;">
 				<div class="col-xs-offset-4 col-sm-8">
-					<button type="button" class="btn btn-default btn-sm">Display All</button>
 					<button type="submit" class="btn btn-primary btn-sm" value="Search">Submit</button>
 				</div>
 			</div>
