@@ -12,8 +12,8 @@ Feel free to contact us for questions, comments or feedback!
 
 titanplanner@gmail.com
 
-Members (Alphabetical)
-======================
+Members
+=======
 
 The MeGustas comprise of a group of graduate students from the entering class of Fall 2013.
 
